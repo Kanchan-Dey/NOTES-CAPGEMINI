@@ -1,0 +1,952 @@
+CAPGEMINI- DAY 1
+java has two heirarchies marv and collection heirarchy
+
+regular expression is a string used to match a pattern
+lambda expressions are used for functional programming
+programming languages can be classified into 
+. High level language
+. Low level language = the code which the machine understands - binary code is a low level language 
+0 represents cut off of electricity in the hardware through the logical gates which means 0 volts
+1 represents generation of electrcity in the hardware """ which means the machine takes inputs like this
+-> low level language is very difficult to understand which is binary code so it was transformed into assembly level language which is somewhat  human readable , they use mewnemonics  like ADD, MUL and DIV.this is not machine understandable though, so the software called assembler is used to convert assembly level language to binary language.
+-> to make the assembly language more human readable high level language was made which are the codes we use like java,c, etc also called scripted language.
+The conversion from high level to low level  is done using compiler and interpreters. In java compilation occurs before interpretation which converts it into intermediate level and then interpreter converts it to low.
+java is a structured platform independent object oriented language.(strictly typed)
+python is not structured object oriented language.(dynamically typed)
+JAVA
+It is class based. it consists of blocks.everything is written inside the class except for import and package code.JAVA is a strictly typed language(with respect to datatypes).We cannot declare a variable without a datatype and the variable cannot contain any other kind of datatypes later.
+Java is highly flexible and highly scalable and is more secure.It is a multithreaded language.
+Platform independent language VS Platform dependent language
+- Platform dependent languages run on that specific platform only.
+-A windows compiler  would produce a exe file when high level language is compiled using it. it is  not understood by mac os which doesnot use exe files and uses dmg files which is not understood by windows.
+C is a platform dependent language.
+-Platform independent language can be compiled and executed in any platform.
+-JAVA source file which is the program written by us  can be compiled by all platforms using a software called JDK(java development kit) which has a compiler inside it, which eventually generates a .class file  known as byte code (Intermediate level language which can neither be completely understood by human nor machine.
+JDK  uses JIT , interpreter to produce output for all kinds of platforms. So java programs can be compiled and executed in all platforms if JDK is installed in it.
+You should never share source files. Companies share information in the form of executable files in intermediate level language.thats what it is in case fro java which is .class file using byte code.
+JDK
+JDK (Java Development Kit) is a software. it contains compiler called javac(Java compiler) and JRE(Java Runtime Environment) . JRE is allocated a space in the RAM for the execution for java program.
+JRE
+JRE contains library files,byte code verifier and JVM.The library files are the packages that are imported for implementation of differents codes like io,scanner,util , lang etc.Database connections are done using the SQL package.BYTE CODE verifier checks whether the compiler has created the correct byte code.THe output of a java code is a .class file.
+JVM(JAVA virtual machine) is a kernel or a software which is used to execute java programs specifically.
+JVM contains JIT,Interpreter,Run Time System, etc
+In java Compiler is used to convert source code to byte code  all at once.
+In java Interpreter is used to convert byte code to machine understandable language line by line.
+JIT  is Just In TIme compiler identifies loops and converts the repetative part into binary at once whereas interpreter would convert the repetative part every time it repeats.It therefore does not perform compilation but it actually does execution.
+Structure of java program
+class Classname{
+Declaration- variable , method , class(nested classes)
+Initializing-static initializer,nonstatic initializer, constructor
+}
+A variable is nothing but a block of memory to store a data where data can be varied from point to point.It can store only a specific type of data.A variable is a named block of data that is used to store a specific type of data.
+A method is a block of code used to perform a specific task to enable modularity and reusability and structure it.
+ In object oriented programming  we can replicate a real life object into the software world and only choose the features we want it to have. A class  is a template for objects.
+(enums is a template used for constants)
+IDE integrated development environment 
+ a package contains a group of closely related templates.
+if we dont specify a access specifier the compiler assumes it as a package level access specifier and not default now.
+System is a class , out is a reference variable name. static is non access specifier in public static void main(String[] args); String is class name [] is array args is reference value.
+When you start a program the JVM looks for a main method and starts executing from it.
+Token is the smallest unit of a program.Eg: identifiers,keywords,literals
+ctrl+shift+f to format code in eclipse
+Keywords
+Reserved and predefined words given by the java library associated with a specific task.The task performed by themn cannot be changed by the user.They are compiler understandable words.
+Identifiers
+We can give a name to a class,interface,record,enum, variable and methods.
+Rules for naming an identifier: 
+-   An identifier cannot start with a number
+-  Only & and _ are the special characters that can be usedf to name a component in java
+-  Keywords cannot be used as identifiers.
+Conventions of an identifier:
+-  class: 
+ If it is a single word identifier first letter of the word must be capital.
+ Eg: class Program{}
+ If it is multiword identifier from the next word onwards each word must be in  uppercase
+Eg: class ProgramDemo{}
+-method:
+If it is a single word method everything is in lowercase.
+public static void sort(){}
+If it is multiword method the first letter will be uppercase from the next word onwards
+Eg:- public static void sortArray(){}
+-variables:
+Every varaibe must be in lowercase.
+Eg: int num1=10;
+String greetMessage if multiworded
+for final variables every thing should be uppercase
+Eg: final int  MIN_INTEGER=10;
+Literals
+They are raw data that are used in our program.
+Number
+---->Integer(-10 to +10)
+---->Character('c')
+---->Decimal/Floating point(-10.56 to +ve)
+---->String("hello")
+Single value literal allocates a single space to the data stored in it.
+Multi value literal allocates a more space like an object (string stores the specific characters in an array)
+We do not have pointers in java so it is not reference type language. it is a value type language which makes it more secure.
+JAVA is both an object oriented and functional oriented programming language(type of language that performs operations through functions without changing the class definition.
+
+CAPGEMINI DAY 2
+Variables and their datatypes
+Datatypes are the  mechanism that determines what type of data is stored in the variable
+Eg: datatype identifier; 
+Datatype is classified into two types :
+Primitive datatype(stores single value literals)- char(2 byte),boolean(1 bit),Number(int(4 byte),byte,short(2 byte),long(8 bytes)),(floating values)double(8 bytes),float(4 bytes)
+Non primitive datatype(stores multivalue literals)- string,class,INTEGER,All the classnames
+JAVA uses multiple languages in symbols apart from ASCII code so char is 2 bytes in java
+Char default value is "/u000"
+FOR string and all non primitive data types default value  is null.
+SIze of the string cannot be determined.
+SUFFIX FOR ALL THE DATATYPES
+There are no suffix for byte,short,int.boolean and char.
+FOR long it is l or L
+FOR float it is f or F
+FOR double it is d or D
+Variables are based on datatypes and based on scope.Based on datatype includes primitive and non primitive variables.Based on scope includes static,nonstatic and local variables.
+Primitive variables are the variables that store primitive type of data.
+Non primitive variables are the variables that store non primitive type of data or reference type of data.
+Static variables and non static variables are declared directly inside the class block.Static variables are prefixed with the modifier static. It can be accessed throughout the class.They are accessed with the help of class name. If a static variable has to be accessed within the same class where it is declared than it is not mandatory to call them by using their classname they can be directly accessed through their identifier.If we want to use the static variable of one class in another class it has to use the classname.Also called as class variables
+ SO a variable declaration can be [modifiers] datatype identifier;  Modifiers are optional.
+Eg:
+public class Variables {
+	static int a = 10;
+	public static void main(String[] args) {
+		System.out.println(a);
+		}
+}
+
+public class AccessVariables {
+public static void main(String[] args) {
+	System.out.println(Variables.a);
+}
+}
+
+Nonstatic variables are also declared directly inside the class block.They can be accessed with the help of object reference. they dont need a static modifier to be prefixed.Also called as object variables.
+Local variables  are variables that have scope inside the block that they are declared in only.
+Characteristics of variables
+-- If we have to declare multiple variables of same type in a single line then we can use the syntax Eg: int a,b,c;
+-- If we want to declare multiple variables of same type  with the same                                          value then the syntax is Eg:int a,b,c;    a=b=c=30;
+-- A value of a variable can be reassigned. Eg: int a,b,c;  a=b=c=30;      a=100;
+--  We cannot create multiple variables with the same name inside the same scope.
+public class Variables {
+	static int a = 10;
+	public static void main(String[] args) {
+	 int a=20;
+	 System.out.println(Variables.a);//10
+	 System.out.println(a);//20
+	}
+public static void access() {
+		System.out.println(a);//10
+	}
+}
+WIthin the main class the print funtion for a gives 20 because of its local scope priority. The Variables.a print function prints the static variable 10.And the print function of a in the access function is 10 as the 10 is in static scope or global scope. 
+-- A variable declared in higher scope can be accessed in both higher as well as lower scopes.But a variable declared in lower scope can be accessed only within that lower scope.
+public class Variables {
+	
+	public static void main(String[] args) {
+	 int a=20;
+	 {
+		 int b=20;
+		 System.out.println(b);//prints 20
+		 System.out.println(a);//prints 20
+	 }
+	 System.out.println(b);//throws an error
+	 System.out.println(a);//prints 20
+	 }
+}
+
+By default in java every number type of literal is considered a integer type in java
+By default in java every decimal type or floating type value is considered a double type
+
+Operators
+Operators  are the symbols used to perform a specific type of task.
+Operands are the input we provide for the operator. 
+Operators are of three types: unary operator, binary operators, ternary operators
+Unary operators include - typecast,Increement/Decreement,Logical NOT
+Binary operators include - Assignment,Compound Assignment,Relational Operators,Logical AND and OR,Arithmetic operators,instanceOf Operator
+Ternary operators include - Conditional operator
+PRECEDENCE AND ASSOCIATIVITY OF AN OPERATOR
+an expression is a sentence that contain more than one operator.
+Precedence is the priority of operators execution
+Associativity is the order in which the operations execute(left to right) OR (right to left)
+Eg: int result=(20+3)+50-(2+1)+10*20;
+=23+50-3+10*20
+=23+50-3+200
+=73-3+200
+=70+200
+=270
+Check precedence and asociativity chart
+Every operator has its own associativity
+A group of operators used to perform arithmetic operations are called arithmetic operators.
++ has two applications - addition and concatenation. the type of operands for + can be number type or string type or character type.Boolean type  of data do not participate in arithmetic operations but it takes part in concatenation as long as one of the operands is a string.
+When we add two characters their ASCII representations will be added and representated
+Every arithmetic operation returns integer type by default when any one of the operands is a variable.If a variable of greater datatype is used then that type of data will be returned.
+"true"+'c'=truec
+10+"hello"+true;= 10hellotrue
+10+true+"hello" = error
+10+10.75+'A'+true+"hi"+"demo"+15
+= 20.75+'A'+true+"hi"+"demo"+15
+=85.75+true+"hi"+"demo"+15
+=error(boolean and integer cannot be added)
+byte b=128; will print -128 because the compiler sees the overflow of the size of the byte range of byte is from -128 to 127 so it will circle back to the -128 if the byte b=130 then it will print -126
+byte x =10+50 will store 60 in x but if byte b1=10 and byte byte b2=50; and byte result=b1+b2;  it will throw and error as the value becomes of integer type so we cannot store a larger type of data in a smaller container.
+int x=10;
+long y=2;
+int z =x/y;
+it will throw an error as one of the operands is long and it will return long type result as it is a larger datatype so we cannot store it in a smaller datatype because of possible lossy conversion.
+true/10 would throw an error in java 
+A/10 would give a output where A gets converted to its ASCII value
+
+problem statement day 1
+Product of the array itself
+GENERATE AN ARRAY where if {3,4,5,6}
+ produces the output{120,90,72,60)
+Constraint: -10 to +10
+MAIN
+INPUT ARRAY SIZE
+INPUT ARRAY ELEMENTS USING AN ARRAY
+CHECK IF THE ELEMENTS ARE WITHIN -10 AND 10 AND IF SIZE OF ARRAY IS MINIMUM OF 3 IF it passes move on to the product code
+TAKE A LOOP WHERE integer i runs from 0 to array length.
+
+IF array{i} =0 then just continue and skip to the next index
+then take the product of the other values
+AND THEN DIVIDE THE PRODUCT BY THE VALUE AT THAT INDEX
+
+PROBLEM STATEMENT 2
+TAKE AN ARRAY OF SIZE 4.EVERY BLOCK OF THE ARRAY SHOULD CONTAIN ONLY POSITIVE THREE DIGIT NUMBERS.CHECK IF THE NUMBERS ARE PALINDROME.
+
+import java.util.Scanner;
+public class PalindromeArray {
+
+	 
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+	  System.out.println("enter the array size");
+	  int n=sc.nextInt();
+	  int array[]=new int[n];
+	  System.out.println("enter the array elements");
+	  for(int i=0;i<n;)
+	  {
+		  array[i]=sc.nextInt();
+		  if(array[i]<100 || array[i]>999)
+		  {
+		      System.out.println("Enter three digit number");
+		      array[i]=sc.nextInt();
+		  }
+		  i++;
+		  
+	  }
+	
+	  for(int i=0;i<n;i++)
+	  {
+		  int temp=array[i];
+		  int reverse=0;
+		  while(temp!=0)
+		  {
+			  reverse=reverse*10+(temp%10);
+			  temp=temp/10;
+			  
+		  }
+		  if(reverse==array[i])
+		  {
+			 System.out.println(array[i]);
+		  }
+	  }
+	  
+	}
+	
+
+}
+
+CAPGEMINI DAY 3
+Relational Operators
+There are six relational operators
+They are used for comparision.
+Associativity is from left to right.
+Returns boolean type of data.
+Both the operands of same type(NUMBER will compare to character but not to string and boolean,STRING,BOOLEAN)
+> is used to check whether the left operand is greater than the right operand.
+TRUE>FALSE RETURNS AN ERROR AS WE CANNOT COMPARE BOOLEAN and STRING USING > , <,>=,<=
+> and < have the same features
+>= checks if the left operand is greater than or equal to the right operand and vice versa for <=
+== is comparing strings using the references or the adresses of this strings.
+LOGICAL OPERATORS
+LOGICAL AND is denoted by &&. It is used to evaluate both the conditions.Returns boolean type.Both the operands are conditions.Needs both conditions to return true to get output true.If operand1 returns true then operand2 will bechecked.If operand1 is not true then operand2 will not be checked.
+LOGICAL OR is denoted by ||. It is used to evaluate both of the conditions if condition 1 is true.Needs any one of the condition to be true to return true.
+! is used to negate the condition.
+TERNARY OPERATORS
+It is expressed by Operand1? Operand2:Operand3; where operand1 is a condition.
+If operand1 is returning true operand2 will be returned else operand3 is returned.
+Eg: 10>20?"10 is greater":20 ;This type of ternary operator where the result can be either string and int the result is stored in var and object. 
+A printing statement cannot be used in operand1 and operand2.
+INCREEMENT AND DECREEMENT OPERATORS
+Decreement and increement are of two types pre and post.
+pre is incre/decre first then use
+post is use first and then incre/decre
+int a= 2
+int b=5
+int res= a++ - --a - a-- + b-- + ++b + ++a - ++b + b--;
+2-2-2+5+5+2-6+6
+10
+COMPOUND ASSIGNMENT OPERATORS
++= , -= , *= , /= , %=
+byte b=10; b=b+10; will return an error b+=10 =20 with no error The error occurs because b + 10 results in an int, and assigning it back to a byte requires explicit casting, while b += 10 directly modifies b without changing its type.
+*TYPECAST OPERATOR
+The process of converting one type of data into another type is called typecasting and the operator used in it is called typecast operator.
+Typecasting is of two types : Primitive typecasting,Non-primitive typecasting
+Primitive typecasting is converting one  type of primitive data into another type. Two types are Widening and Narrowing
+Non primitive typecasting is converting one type of nonprimitive data into another type . Two types are Upcasting and downcasting.It is used in polymorphism.
+Widening  is the processing of converting a smaller type of data into a larger type.
+int a =10; long l=a; a has a memory block of 4 bytes and l has a memory block of 8 bytes. The compiler allows this kind of conversion as it will automatically perform the operation.THis is also known as implicit typecasting.
+Dividing by 0 gives arithmetic exception but dividing by 0.0 gives infinity. 
+Narrowing is the process of converting a larger type of data into a smaller type using the typecast operator.the disadvantage of narrowing is lossy  conversion of data.
+Float cannot be converted as it use IEEE type of storing data whereas integer types like short ,long,int store in signed unsigned type.
+therefore decimal and float can contain both decimal and integer type of data.So float is considered bigger than long.
+Byte<short<int<long<float<double
+char is smaller than int bigger than byte.
+CONTAINER WITH MOST WATER
+class Solution {
+    public int maxArea(int[] height) {
+        int left=0;
+        int right=height.length-1;
+        int area;
+    int maxarea=Integer.MIN_VALUE;
+        while(left<right)
+        {
+            area=Math.min(height[left],height[right])*(right-left);
+            maxarea=Math.max(area,maxarea);
+            if(height[left]<height[right])
+            {
+                left++;
+                continue;
+            }
+            right--;
+        }
+        return maxarea;
+    }
+}
+CAPGEMINI DAY 4
+METHODS
+A method is a block of code that is used to execute a specific task.Used for modularrity,readabilty and reusability.
+Syntax:           
+Accessmodifier Nonaccessmodifier returntype identifier(formal arguments){
+                                                                             {               method signature}
+{                                                     method declaration                                   }
+//method body
+
+return;
+}
+the whole syntax is called nethod definition.
+Access modifiers include public,protected,package-level,private.THey cannot be used on local components. they can be only used on components directly used in the class block.It changes the accessibility of a component in java.
+Nonaccess modifiers include static,nonstatic,abstract,transient,syncrhonized.
+Return type is the type of data a method will return after its execution.Every method has a return type.Return types for methods can be  primitive or nonprimitive data or void.
+Formal args are any type of local data that needs to be passed in the method.
+return is a control transfer statement.
+in public static void main(string[] args) specifies that it can accept an array of strings.
+When a program is runned, a JVM is called and it searches for the main method. it is designed to call only the main method.So( to print the result of any other method or use it) (invoke) we have to call(invoke) it in the main method.A method can only be invoked using its method signature. 
+The process of binding the a method calling statement to the the method signature during compilation is known as compile time binding.
+When we call a method
+When a method is being called from another method the execution of caller method is paused and the execution of called method will start.Once the execution of called method is completed, the line of  control will return back to the caller and the execution of caller method resumes.
+*Static methods have the same features as static variables*
+
+
+public class Methods {
+	public static void main(String[] args) {
+		//System.out.println("main start");
+		message();
+		//System.out.println("main end");
+	}
+     public static void message() {
+    	 System.out.println("hello world");
+     }
+}
+public class AccessMethods {
+public static void main(String[] args) {
+	Methods.message();
+}
+}
+
+Things to avoid while creating a method
+-- We can create any number of methods in a class.
+-- We cannot create a method inside a method.
+-- We cannot create multiple methods with the same signature within the same class.
+-- The signature of method call statement and the signature of method declaration statement must match in order to bind.CALLLED COMPILE_TIME BINDING.
+-- We dont have to create an object to create a static method.
+-- non static methods are also known as object methods and can have multiple copies depending on the number of objects being created.We cannot create non static method without an object.
+Methods are of two types- parameterized and nonparameterized.
+One that returns data and one that does not return data is in both the types.
+Return that has a return type sends a response back from the method to the caller and returns primary goal is to transfer the control back to the caller.
+IF the return type of a method is int we can still return short and other smaller datatypes of number by widening.We cannot send a larger datatype than int.
+CAPGEMINI DAY 5
+Method overloading is the concept where multiple methods have the same methd name but different method signature. It is an example of compile time polymorphism because the methd which has to be called is decided during compilation. 
+We use method overloading to give the user multiple options to do the same task by giving diff inputs.
+If we run two methods with add(int a,int b) and add(byte a,byte b) AND we call add(10,20) it will use the int method as the raw literals are considered as integer.
+-- If there are multiple methods with same name the compiler will filter the methods with same number of argument of method call and method declaration.
+-- It checks for type of arguments and the order in which they are arranged.
+-- the return type of method do not play any role in method overloading.
+eg: 
+ public static void main(String[] args) {
+       
+    add(10,20,40);
+    }
+    public static void add(int a,int b,float c)
+    {
+       System.out.println("first");
+    }
+    public static void add(float a,float b,float c)
+    {
+       System.out.println("second");
+    }
+MATH CLASS
+     In the above snippet the output will be first as the first two are integers and the last one is automatically upcasted to float.
+Math.subtractExact	                                                                       Regular Subtraction (-)
+Overflow Handling	Throws ArithmeticException on overflow	Silently overflows (wraps around)
+Use Case	Critical calculations where overflow must be detected	General-                      purpose subtraction
+Performance	Slightly slower due to overflow check	                        Faster
+
+Absolute(int) returns void and substract(int,int) gives int then absolute(substract(int,int)
+ SCANNER CLASS
+It is used for taking inputs from the user, a file and a string object.
+It is present in java.util package
+System.in connects to the console.
+shortcut for importing - ctrl shift o
+charAt(0) is not a methd of scanner class.
+** When using nextInt() the scanner class if it  doesnt find a value  in the i/0 file it waits for the user to input it. When the user enters it , the value is stored in string type in the i/o file which is then converted by the scanner to the original int and then back to the console or the java ide.When we click on enter after entering the value it gives a new line \n in the i/o file .When the scanner converts it for the console the i/o is only left with the new line characters.
+When we take a different type input for a different type scanner method it gives an inputmismatchexception
+* When we enter a scan.nextLine after another scanner method the string consumes the newline character left in the buffer storage so it will just print the new line and the program will be terminated. so we have to use one nextLine() to consume the data in the buffer storage and then another one to take the string input.
+** IF we use nextLine() after nextInt() and the input of the nextInt() given by the user is i:e 10 20 30 then it will store 10 20 30\n in the buffer storage and then the print statement before the nextLine will print the value 10 then it will automatically print the string as  20 30 as it consumes everything within the buffer.nextInt() has a delimiter of " ".Scanner class has a default delimiter of " ".
+We can change to a new delimiter using useDelimiter().
+hasnextInt() checks whether the value inputed is integer or not.
+CONDITIONAL STATEMENTS
+Conditional statements are statement that are used to execute a block of code based on a condition.
+We have : if,else-if ladder,if-else,switch,nested if,nested if-else,nested switch
+
+CAPGEMINI DAY 6
+JUNIT is used to test unit blocks of a code whether it works perfectly or not. It is used in testcases in exam compilers.
+­­LOOPING STATEMENTS
+
+Min num of iterations for a for and while loop are 0 and do while loop is 1
+Write a program to count the number of digits in a number
+int count=0;
+int temp;
+while(num>0)
+{
+temp=num%10;
+count++;
+num=num/10;
+}
+Sopln(count);
+
+if we do not provide a condition or we provide false for a while loop it will give an error
+ARRAYS
+Used when we want to use mass number of same types of data. It is homogeneous,the size is fixed, and it is an indexed based data structure,An object in java so every array has an address.
+- Arrays store default value of their type.
+datatype[] identifier = new datatype[size];
+Primitive arrays store primitive type of data. Non primitive arrays store non primitive data.
+each block of an array is the size of its datatype.
+int[] arr= new int[] {1,2,3}; is a valid array initialization.
+ if we use 	System.out.println(arr); it gives the adress of the array.it generally starts with [I@
+
+for each loop can be used on an array.It cannot be used to manipulate the data structure. if we use a loop to manipulate a collection it throws AN ERROR.
+package arrays;
+
+import java.util.Arrays;
+
+public class methodsOfArrays {
+public static void main(String[] args) {
+	int[] arr= {1,3,45,67,78};
+	int target=45;
+	int target1=2;
+	int i= Arrays.binarySearch(arr,target);
+	int j= Arrays.binarySearch(arr,target1);
+	System.out.println(i);
+	System.out.println(j);
+	/*int[] ar1r=Arrays.copyOf(arr,7);
+	for(int k: ar1r)
+	{
+		System.out.println(k);
+	}
+	*/
+	int[] ar1r=Arrays.copyOfRange(arr,0,3);
+	for(int k: ar1r)
+	{
+		System.out.println(k);
+	}
+	System.out.println(arr.equals(ar1r));
+	Arrays.sort(nums);
+   System.out.println(Arrays.toString(nums));
+}
+}
+Binary search
+start=0
+end=arr.length-1
+mid=start+(end-start)/2
+while(start<=end)
+if(arr[mid]==target)
+return mid
+break
+target>arr[mid]
+start=mid+1
+target<arr[mid]
+end=mid-1
+time complexity: o(logn)
+
+CAPGEMINI DAY 8
+2D ARRAYS
+2D arrays are an array of arrays. Also called matrices.
+A jagged array is an array where the no. of columns or rows of the first array and the second array are different. 
+
+SAMPLE 2D ARRAY
+package twodarrays;
+
+import java.util.Scanner;
+
+public class TwoDimenArray {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the no. of rows and columns");
+		int n=sc.nextInt();
+		int m=sc.nextInt();
+		 int[][] arr= new int[n][m];
+		 for(int i=0;i<arr.length;i++)
+		 {
+			 for(int j=0;j<arr[i].length;j++) {
+				 arr[i][j]=sc.nextInt();
+			 }
+		 
+		 }
+		 for(int i=0;i<arr.length;i++)
+		 {
+			 for(int j=0;j<arr[i].length;j++) {
+				 System.out.print(arr[i][j] + " ");
+				
+			 }
+			 System.out.println();
+		 }
+	}
+      
+}
+// System.out.println(Arrays.deepToString(arr)); using Arrays class will print it in string type.[[1, 2], [3, 4]] will be the output of 2 rows and columns and inputs being 1,2,3,4
+
+PRINTING A 2D ARRAY USING FOR EACH LOOP
+for(int[] i: arr )
+		 {
+			 for(int j: i) {
+				 System.out.print(j+ " ");
+				
+			 }
+			 System.out.println();
+		 }
+	}
+      
+SYMMETRIC AND TRANSPOSE OF A MATRIX
+package twodarrays;
+
+import java.util.Scanner;
+
+public class TwoDimenExample {
+	public static void main(String[] args) {
+		// max(input());
+		//symmetry(input());
+		transpose(input());
+	}
+
+	public static int[][] input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the no. of rows and columns");
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		int[][] arr = new int[n][m];
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+
+		}
+		return arr;
+	}
+
+	public static void max(int[][] arr) {
+		int max = 0;
+		for (int[] i : arr) {
+			for (int j : i) {
+				if (j > max)
+					max = j;
+			}
+
+		}
+		System.out.println(max);
+	}
+
+	public static void symmetry(int[][] arr) {
+		int flag = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (flag == 0) {
+				for (int j = 0; j < arr[i].length; j++) {
+					if (arr[i][j] != arr[j][i]) {
+						flag = 1;
+						break;
+					}
+				}
+			}
+		}
+		if (flag == 0) {
+			System.out.println("SYMMETRIC");
+		}
+
+	}
+	public static void transpose(int[][] arr)
+	{for (int i = 0; i < arr.length; i++) {
+
+			for (int j = 0; j < arr[i].length; j++) {
+				arr[j][i]=arr[i][j];
+			}
+	}
+	for(int[] i: arr)
+	{
+		for(int j:i)
+		{
+			System.out.print(j+" ");
+		}
+		System.out.println();
+	}
+	}
+}
+
+ROTATE IMAGE PROBLEM LEETCODE(REVERSE OF A TRANSPOSE OF A MATRIX)
+class Solution {
+    public void rotate(int[][] matrix) {
+        int temp=0;
+       for(int i=0;i<matrix.length;i++) 
+       {
+        for(int j=i+1;j<matrix[i].length;j++)
+        {
+            temp= matrix[i][j];
+            matrix[i][j]=matrix[j][i];
+            matrix[j][i]= temp;
+
+        }
+     
+       }
+       int temp1=0;
+       for(int i=0;i<matrix.length;i++) 
+       {
+        for(int j=0;j<matrix.length/2;j++)
+        {
+            temp1= matrix[i][j];
+            matrix[i][j]=matrix[i][matrix.length-j-1];
+            matrix[i][matrix.length-j-1]=temp1;
+        }
+       }
+      
+
+    }
+}
+ALTERNATE METHOD
+class Solution {
+    public void rotate(int[][] matrix) {
+        int n=matrix.length;
+        int[][] ans = new int[n][n];
+        for(int i=0;i<n;i++)
+        {
+            for(int j=n-1;j>=0;j--)
+            {
+                ans[j][i]=matrix[i][j];
+            }
+        }
+         for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                matrix[i][n-1-j]=ans[i][j];
+            }
+        }
+
+    }
+}
+JAGGED ARRAY
+ IN A JAGGED ARRAY WE CANNOT DECLARE ROWS AND COLUMNS IN THE SAME LINE. ONLY DECLARE THE NUMBER OF ARRAYS AND THEN DECLARE THE NUMBER OF COLUMNS FOR EACH ROW SEPERATELy.
+eg:
+int arr[][] = new int[2][];
+
+        // Making the above array Jagged
+        arr[0] = new int[3];
+        arr[1] = new int[2];
+
+JAGGED ARRAY
+package twodarrays;
+
+import java.util.Scanner;
+
+public class JaggedArray {
+public static void main(String[] args) {
+	jagged();
+}
+public static void jagged()
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the array size rows");
+	int m=sc.nextInt();
+	int n=0;
+	int[][] arr = new int[m][];
+	for(int i=0;i<m;i++)
+	{
+		System.out.println("enter the array size columns");
+		n=sc.nextInt();
+		arr[i]=new int[n];
+	}
+	System.out.println("ENTER THE ARRAY ELEMENTS");
+	for(int i=0;i<m;i++)
+	{
+		for(int j=0;j<arr[i].length;j++)
+		{
+			arr[i][j]=sc.nextInt();
+		}
+	}
+	for(int i=0;i<m;i++) {
+		for(int j=0;j<arr[i].length;j++) {
+	System.out.print(arr[i][j]);
+	}
+		System.out.println();
+		}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+ 
+
+ 
+
+ 
+
