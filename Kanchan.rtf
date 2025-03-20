@@ -495,6 +495,229 @@ target<arr[mid]\par
 end=mid-1\par
 time complexity: o(logn)\par
 \par
+\b\fs32 CAPGEMINI DAY 8\par
+\fs24 2D ARRAYS\par
+\ulnone\b0 2D arrays are an array of arrays. Also called matrices.\par
+\ul A jagged array \ulnone is an array where the no. of columns or rows of the first array and the second array are different. \par
+\par
+\ul SAMPLE 2D ARRAY\ulnone\par
+\cf1\b\f1\fs20 package\cf2\b0  twodarrays;\cf0\par
+\par
+\cf1\b import\cf2\b0  java.util.Scanner;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  TwoDimenArray \{\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  main(String[] \cf4 args\cf2 ) \{\cf0\par
+\cf2\tab\tab Scanner \cf4\ul sc\cf2\ulnone =\cf1\b new\cf2\b0  Scanner(System.\cf3\b\i in\cf2\b0\i0 );\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf7 "enter the no. of rows and columns"\cf2 );\cf0\par
+\cf2\tab\tab\cf1\b int\cf2\b0  \cf4 n\cf2 =\cf4 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\tab\cf1\b int\cf2\b0  \cf4 m\cf2 =\cf4 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\tab  \cf1\b int\cf2\b0 [][] \cf4 arr\cf2 = \cf1\b new\cf2\b0  \cf1\b int\cf2\b0 [\cf4 n\cf2 ][\cf4 m\cf2 ];\cf0\par
+\cf2\tab\tab  \cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 i\cf2 =0;\cf4 i\cf2 <\cf4 arr\cf2 .\cf3 length\cf2 ;\cf4 i\cf2 ++)\cf0\par
+\cf2\tab\tab  \{\cf0\par
+\cf2\tab\tab\tab  \cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 j\cf2 =0;\cf4 j\cf2 <\cf4 arr\cf2 [\cf4 i\cf2 ].\cf3 length\cf2 ;\cf4 j\cf2 ++) \{\cf0\par
+\cf2\tab\tab\tab\tab  \cf4 arr\cf2 [\cf4 i\cf2 ][\cf4 j\cf2 ]=\cf4 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\tab\tab  \}\cf0\par
+\cf2\tab\tab  \cf0\par
+\cf2\tab\tab  \}\cf0\par
+\cf2\tab\tab  \cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 i\cf2 =0;\cf4 i\cf2 <\cf4 arr\cf2 .\cf3 length\cf2 ;\cf4 i\cf2 ++)\cf0\par
+\cf2\tab\tab  \{\cf0\par
+\cf2\tab\tab\tab  \cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 j\cf2 =0;\cf4 j\cf2 <\cf4 arr\cf2 [\cf4 i\cf2 ].\cf3 length\cf2 ;\cf4 j\cf2 ++) \{\cf0\par
+\cf2\tab\tab\tab\tab  System.\cf3\b\i out\cf2\b0\i0 .print(\cf4 arr\cf2 [\cf4 i\cf2 ][\cf4 j\cf2 ] + \cf7 " "\cf2 );\cf0\par
+\cf2\tab\tab\tab\tab\cf0\par
+\cf2\tab\tab\tab  \}\cf0\par
+\cf2\tab\tab\tab  System.\cf3\b\i out\cf2\b0\i0 .println();\cf0\par
+\cf2\tab\tab  \}\cf0\par
+\cf2\tab\}\cf0\par
+\cf2       \cf0\par
+\cf2\}\cf0\par
+\cf2\highlight8\b\f2 //\f1  System.\cf3\i out\cf2\i0 .println(Arrays.\i deepToString\i0 (\cf4 arr\cf2 ));\f2  using Arrays class will print it in string type.\highlight0\f1 [[1, 2], [3, 4]]\f2  will be the output of 2 rows and columns and inputs being 1,2,3,4\f0\fs24\par
+\b0\par
+PRINTING A 2D ARRAY USING FOR EACH LOOP\par
+\cf1\b\f1\fs20 for\cf2\b0 (\cf1\b int\cf2\b0 [] \cf4 i\cf2 : \cf4 arr\cf2  )\cf0\par
+\cf2\tab\tab  \{\cf0\par
+\cf2\tab\tab\tab  \cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 j\cf2 : \cf4 i\cf2 ) \{\cf0\par
+\cf2\tab\tab\tab\tab  System.\cf3\b\i out\cf2\b0\i0 .print(\cf4 j\cf2 + \cf7 " "\cf2 );\cf0\par
+\cf2\tab\tab\tab\tab\cf0\par
+\cf2\tab\tab\tab  \}\cf0\par
+\cf2\tab\tab\tab  System.\cf3\b\i out\cf2\b0\i0 .println();\cf0\par
+\cf2\tab\tab  \}\cf0\par
+\cf2\tab\}\cf0\par
+\cf2       \par
+\ul\b\f2 SYMMETRIC AND TRANSPOSE OF A MATRIX\ulnone\b0\par
+\cf1\b\f1 package\cf2\b0  twodarrays;\cf0\par
+\par
+\cf1\b import\cf2\b0  java.util.Scanner;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  TwoDimenExample \{\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  main(String[] \cf4 args\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf6 // max(input());\cf0\par
+\cf2\tab\tab\cf6 //symmetry(input());\cf0\par
+\cf2\tab\tab\i transpose\i0 (\i input\i0 ());\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b int\cf2\b0 [][] input() \{\cf0\par
+\cf2\tab\tab Scanner \cf4\ul sc\cf2\ulnone  = \cf1\b new\cf2\b0  Scanner(System.\cf3\b\i in\cf2\b0\i0 );\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf7 "enter the no. of rows and columns"\cf2 );\cf0\par
+\cf2\tab\tab\cf1\b int\cf2\b0  \cf4 n\cf2  = \cf4 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\tab\cf1\b int\cf2\b0  \cf4 m\cf2  = \cf4 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\tab\cf1\b int\cf2\b0 [][] \cf4 arr\cf2  = \cf1\b new\cf2\b0  \cf1\b int\cf2\b0 [\cf4 n\cf2 ][\cf4 m\cf2 ];\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0  \cf4 i\cf2  = 0; \cf4 i\cf2  < \cf4 arr\cf2 .\cf3 length\cf2 ; \cf4 i\cf2 ++) \{\cf0\par
+\cf2\tab\tab\tab\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0  \cf4 j\cf2  = 0; \cf4 j\cf2  < \cf4 arr\cf2 [\cf4 i\cf2 ].\cf3 length\cf2 ; \cf4 j\cf2 ++) \{\cf0\par
+\cf2\tab\tab\tab\tab\cf4 arr\cf2 [\cf4 i\cf2 ][\cf4 j\cf2 ] = \cf4 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\tab\tab\}\cf0\par
+\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\tab\cf1\b return\cf2\b0  \cf4 arr\cf2 ;\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  max(\cf1\b int\cf2\b0 [][] \cf4 arr\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b int\cf2\b0  \cf4 max\cf2  = 0;\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0 [] \cf4 i\cf2  : \cf4 arr\cf2 ) \{\cf0\par
+\cf2\tab\tab\tab\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0  \cf4 j\cf2  : \cf4 i\cf2 ) \{\cf0\par
+\cf2\tab\tab\tab\tab\cf1\b if\cf2\b0  (\cf4 j\cf2  > \cf4 max\cf2 )\cf0\par
+\cf2\tab\tab\tab\tab\tab\cf4 max\cf2  = \cf4 j\cf2 ;\cf0\par
+\cf2\tab\tab\tab\}\cf0\par
+\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf4 max\cf2 );\cf0\par
+\cf2\tab\}\cf0\par
+\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  symmetry(\cf1\b int\cf2\b0 [][] \cf4 arr\cf2 ) \{\cf0\par
+\cf2\tab\tab\cf1\b int\cf2\b0  \cf4 flag\cf2  = 0;\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0  \cf4 i\cf2  = 0; \cf4 i\cf2  < \cf4 arr\cf2 .\cf3 length\cf2 ; \cf4 i\cf2 ++) \{\cf0\par
+\cf2\tab\tab\tab\cf1\b if\cf2\b0  (\cf4 flag\cf2  == 0) \{\cf0\par
+\cf2\tab\tab\tab\tab\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0  \cf4 j\cf2  = 0; \cf4 j\cf2  < \cf4 arr\cf2 [\cf4 i\cf2 ].\cf3 length\cf2 ; \cf4 j\cf2 ++) \{\cf0\par
+\cf2\tab\tab\tab\tab\tab\cf1\b if\cf2\b0  (\cf4 arr\cf2 [\cf4 i\cf2 ][\cf4 j\cf2 ] != \cf4 arr\cf2 [\cf4 j\cf2 ][\cf4 i\cf2 ]) \{\cf0\par
+\cf2\tab\tab\tab\tab\tab\tab\cf4 flag\cf2  = 1;\cf0\par
+\cf2\tab\tab\tab\tab\tab\tab\cf1\b break\cf2\b0 ;\cf0\par
+\cf2\tab\tab\tab\tab\tab\}\cf0\par
+\cf2\tab\tab\tab\tab\}\cf0\par
+\cf2\tab\tab\tab\}\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\tab\cf1\b if\cf2\b0  (\cf4 flag\cf2  == 0) \{\cf0\par
+\cf2\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println(\cf7 "SYMMETRIC"\cf2 );\cf0\par
+\cf2\tab\tab\}\cf0\par
+\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  transpose(\cf1\b int\cf2\b0 [][] \cf4 arr\cf2 )\cf0\par
+\cf2\tab\{\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0  \cf4 i\cf2  = 0; \cf4 i\cf2  < \cf4 arr\cf2 .\cf3 length\cf2 ; \cf4 i\cf2 ++) \{\cf0\par
+\par
+\cf2\tab\tab\tab\cf1\b for\cf2\b0  (\cf1\b int\cf2\b0  \cf4 j\cf2  = 0; \cf4 j\cf2  < \cf4 arr\cf2 [\cf4 i\cf2 ].\cf3 length\cf2 ; \cf4 j\cf2 ++) \{\cf0\par
+\cf2\tab\tab\tab\tab\cf4 arr\cf2 [\cf4 j\cf2 ][\cf4 i\cf2 ]=\cf4 arr\cf2 [\cf4 i\cf2 ][\cf4 j\cf2 ];\cf0\par
+\cf2\tab\tab\tab\}\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0 [] \cf4 i\cf2 : \cf4 arr\cf2 )\cf0\par
+\cf2\tab\{\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 j\cf2 :\cf4 i\cf2 )\cf0\par
+\cf2\tab\tab\{\cf0\par
+\cf2\tab\tab\tab System.\cf3\b\i out\cf2\b0\i0 .print(\cf4 j\cf2 +\cf7 " "\cf2 );\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println();\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\}\par
+\par
+\ul\b\f2 ROTATE IMAGE PROBLEM LEETCODE(REVERSE OF A TRANSPOSE OF A MATRIX)\ulnone\b0\par
+class Solution \{\par
+    public void rotate(int[][] matrix) \{\par
+        int temp=0;\par
+       for(int i=0;i<matrix.length;i++) \par
+       \{\par
+        for(int j=i+1;j<matrix[i].length;j++)\par
+        \{\par
+            temp= matrix[i][j];\par
+            matrix[i][j]=matrix[j][i];\par
+            matrix[j][i]= temp;\par
+\par
+        \}\par
+     \par
+       \}\par
+       int temp1=0;\par
+       for(int i=0;i<matrix.length;i++) \par
+       \{\par
+        for(int j=0;j<matrix.length/2;j++)\par
+        \{\par
+            temp1= matrix[i][j];\par
+            matrix[i][j]=matrix[i][matrix.length-j-1];\par
+            matrix[i][matrix.length-j-1]=temp1;\par
+        \}\par
+       \}\par
+      \par
+\par
+    \}\par
+\}\par
+ALTERNATE METHOD\par
+class Solution \{\par
+    public void rotate(int[][] matrix) \{\par
+        int n=matrix.length;\par
+        int[][] ans = new int[n][n];\par
+        for(int i=0;i<n;i++)\par
+        \{\par
+            for(int j=n-1;j>=0;j--)\par
+            \{\par
+                ans[j][i]=matrix[i][j];\par
+            \}\par
+        \}\par
+         for(int i=0;i<n;i++)\par
+        \{\par
+            for(int j=0;j<n;j++)\par
+            \{\par
+                matrix[i][n-1-j]=ans[i][j];\par
+            \}\par
+        \}\par
+\par
+    \}\par
+\}\par
+\ul\b JAGGED ARRAY\par
+\ulnone  IN A JAGGED ARRAY WE CANNOT DECLARE ROWS AND COLUMNS IN THE SAME LINE. ONLY DECLARE THE NUMBER OF ARRAYS AND THEN DECLARE THE NUMBER OF COLUMNS FOR EACH ROW SEPERATELy.\par
+eg:\par
+int arr[][] = new int[2][];\par
+\par
+        // Making the above array Jagged\par
+        arr[0] = new int[3];\par
+        arr[1] = new int[2];\par
+\par
+\fs28 JAGGED ARRAY\fs20\par
+\cf1\f1 package\cf2\b0  twodarrays;\cf0\par
+\par
+\cf1\b import\cf2\b0  java.util.Scanner;\cf0\par
+\par
+\cf1\b public\cf2\b0  \cf1\b class\cf2\b0  JaggedArray \{\cf0\par
+\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  main(String[] \cf4 args\cf2 ) \{\cf0\par
+\cf2\tab\i jagged\i0 ();\cf0\par
+\cf2\}\cf0\par
+\cf1\b public\cf2\b0  \cf1\b static\cf2\b0  \cf1\b void\cf2\b0  jagged()\cf0\par
+\cf2\{\cf0\par
+\cf2\tab Scanner \cf4\ul sc\cf2\ulnone =\cf1\b new\cf2\b0  Scanner(System.\cf3\b\i in\cf2\b0\i0 );\cf0\par
+\cf2\tab System.\cf3\b\i out\cf2\b0\i0 .\highlight9 println\highlight0 (\cf7 "Enter the array size rows"\cf2 );\cf0\par
+\cf2\tab\cf1\b int\cf2\b0  \cf4 m\cf2 =\cf4 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\cf1\b int\cf2\b0  \cf4 n\cf2 =0;\cf0\par
+\cf2\tab\cf1\b int\cf2\b0 [][] \cf4 arr\cf2  = \cf1\b new\cf2\b0  \cf1\b int\cf2\b0 [\cf4 m\cf2 ][];\cf0\par
+\cf2\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 i\cf2 =0;\cf4 i\cf2 <\cf4 m\cf2 ;\cf4 i\cf2 ++)\cf0\par
+\cf2\tab\{\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .\highlight9 println\highlight0 (\cf7 "enter the array size columns"\cf2 );\cf0\par
+\cf2\tab\tab\cf4 n\cf2 =\cf4 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\tab\cf4 arr\cf2 [\cf4 i\cf2 ]=\cf1\b new\cf2\b0  \cf1\b int\cf2\b0 [\cf4 n\cf2 ];\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab System.\cf3\b\i out\cf2\b0\i0 .\highlight9 println\highlight0 (\cf7 "ENTER THE ARRAY ELEMENTS"\cf2 );\cf0\par
+\cf2\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 i\cf2 =0;\cf4 i\cf2 <\cf4 m\cf2 ;\cf4 i\cf2 ++)\cf0\par
+\cf2\tab\{\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 j\cf2 =0;\cf4 j\cf2 <\cf4 arr\cf2 [\cf4 i\cf2 ].\cf3 length\cf2 ;\cf4 j\cf2 ++)\cf0\par
+\cf2\tab\tab\{\cf0\par
+\cf2\tab\tab\tab\cf4 arr\cf2 [\cf4 i\cf2 ][\cf4 j\cf2 ]=\cf4 sc\cf2 .nextInt();\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 i\cf2 =0;\cf4 i\cf2 <\cf4 m\cf2 ;\cf4 i\cf2 ++) \{\cf0\par
+\cf2\tab\tab\cf1\b for\cf2\b0 (\cf1\b int\cf2\b0  \cf4 j\cf2 =0;\cf4 j\cf2 <\cf4 arr\cf2 [\cf4 i\cf2 ].\cf3 length\cf2 ;\cf4 j\cf2 ++) \{\cf0\par
+\cf2\tab System.\cf3\b\i out\cf2\b0\i0 .print(\cf4 arr\cf2 [\cf4 i\cf2 ][\cf4 j\cf2 ]);\cf0\par
+\cf2\tab\}\cf0\par
+\cf2\tab\tab System.\cf3\b\i out\cf2\b0\i0 .println();\cf0\par
+\cf2\tab\tab\}\cf0\par
+\cf2\}\cf0\par
+\cf2\}\cf0\par
+\par
+\cf2\f0\fs24\par
+\ul\par
 \par
 \par
 \par
