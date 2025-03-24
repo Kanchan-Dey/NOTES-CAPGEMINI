@@ -79,4 +79,18 @@ public void getDetails(String email,String password) {
 	}
 }
 }
+STUDENT DRIVER
+ackage encapsulation;
+
+public class StudentDriver {
+ public static void main(String[] args) {
+	Student s=new Student();
+	s.getDetails("123","123");
+	s.setAge("123","123");
+	s.setBranch("124","12322");
+	s.setPassword("123","123");
+	s.getDetails("123","123");
+}
+}
+
 
